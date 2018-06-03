@@ -1,3 +1,49 @@
-<p>
-  add-mouse works!
-</p>
+<br> <!-- quitar!!!!!!!!!! -->
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Add mouse</h5>
+      <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">MUID</span>
+          </div>
+          <input type="text" 
+            class="form-control" 
+            aria-label="Small" 
+            aria-describedby="inputGroup-sizing-sm"
+            [(ngModel)]="ID"
+            name="ID"
+            >
+      </div>
+      <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Owner</span>
+          </div>
+          <input type="text" 
+            class="form-control" 
+            aria-label="Small" 
+            aria-describedby="inputGroup-sizing-sm"
+            [(ngModel)]="owner"
+            name="owner"
+            >
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Birthday</span>
+              </div>
+              <input type="date" 
+                class="form-control" 
+                aria-label="Small" 
+                aria-describedby="inputGroup-sizing-sm"
+                [(ngModel)]="birthday"
+                name="birthday"
+                >
+          </div>
+        </div>
+      </div>
+      <input class="btn btn-primary" type="submit" value="Add Mouse" (click)="addMouse()">
+    </div>
+  </div>
+</div>

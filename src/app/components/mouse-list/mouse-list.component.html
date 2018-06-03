@@ -1,3 +1,11 @@
-<p>
-  mouse-list works!
-</p>
+<div class="row">
+  <div class="col-md-4" *ngFor="let mouse of mice | async">
+    <div class="card" (click)="redirect(mouse.ID)">
+      <div class="card-body">
+        <h5 class="card-title">{{ mouse.ID }}</h5>
+        <p class="card-text">Owner: {{ mouse.owner }} <br> Birth day: {{ (mouse.birthday.seconds * 1000) | date }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
